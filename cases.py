@@ -1,3 +1,5 @@
+import csv
+
 class Case:
     def _init_(self,FIPS,Admin2,Province_State,Country_Region,Last_Update,Lat,Long_,Confirmed,Deaths,Recovered,Active,Combined_Key,Incident_Rate,Case_Fatality_Ratio):
         self.FIPS = FIPS
@@ -15,3 +17,9 @@ class Case:
         self.Incident_Reate = Incident_Rate
         self.Case_Fatality_Ratio = Case_Fatality_Ratio
 
+csvreader = csv.reader("cases.csv")
+header = next(csvreader)
+rows = []
+for row in csvreader:
+    rows.append(row)
+"cases.csv".close()
