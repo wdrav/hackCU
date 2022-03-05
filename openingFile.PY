@@ -1,4 +1,5 @@
 # import urllib.request
+from operator import contains
 import urllib2  
 from datetime import date, timedelta
 
@@ -15,5 +16,7 @@ for x in range(7):
     content=urllib2.urlopen(currentUrl)
 
 # for line in file:
+substring = "Colorado"
 for line in content:  
-    print (line) 
+    if substring in line:
+        print (line) 
