@@ -1,2 +1,2 @@
 # hackCU
-Project for HackCU hackathon
+Project for HackCU hackathon 2022
